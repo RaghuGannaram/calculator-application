@@ -113,17 +113,13 @@ git rm -f path/to/child_repo_1
     git push origin main
     ```
 
-#### Remove submodules:
+#### Other submodule commands:
 
--   Remove a submodule:
+-   List all submodules:
 
     ```sh
-    git submodule deinit -f path/to/child_repo_1
-    rm -rf .git/modules/path/to/child_repo_1
-    git rm -f path/to/child_repo_1
+    git submodule
     ```
-
-#### Other submodule commands:
 
 -   Add a new submodule:
 
@@ -137,57 +133,14 @@ git rm -f path/to/child_repo_1
     git submodule init
     ```
 
--   Update submodules:
-
-    ```sh
-    git submodule update
-    ```
-
--   Update submodules recursively:
-
-    ```sh
-    git submodule update --recursive
-    ```
-
--   Update submodules to the latest commit:
-
-    ```sh
-    git submodule update --remote
-    ```
-
 -   Deinitialize a submodule:
 
     ```sh
     git submodule deinit [--all | <path>]
     ```
 
--   Remove a submodule:
-
-    ```sh
-    git submodule deinit -f <path>
-    rm -rf .git/modules/<path>
-    git rm -f <path>
-    ```
-
--   List all submodules:
-
-    ```sh
-    git submodule
-    ```
-
--   Show the status of submodules:
-
-    ```sh
-    git submodule status
-    ```
-
 -   Synchronize submodules:
 
     ```sh
     git submodule sync [--recursive]
-    ```
-
--   Update all submodules and their respective branches:
-    ```sh
-    git submodule update --remote --merge
     ```
