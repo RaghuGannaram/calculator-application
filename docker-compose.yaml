@@ -1,0 +1,40 @@
+services:
+  addition-service:
+    image: raghugannaram/addition-service:1.0.0
+    ports:
+      - "9001:9001"
+    environment:
+      - LOG_LEVEL=debug
+
+  subtraction-service:
+    image: raghugannaram/subtraction-service:1.0.0
+    ports:
+      - "9002:9002"
+    environment:
+      - LOG_LEVEL=debug
+
+  multiplication-service:
+    image: raghugannaram/multiplication-service:1.0.0
+    ports:
+      - "9003:9003"
+    environment:
+      - LOG_LEVEL=debug
+
+  division-service:
+    image: raghugannaram/division-service:1.0.0
+    ports:
+      - "9004:9004"
+    environment:
+      - LOG_LEVEL=debug
+
+  calculation-service:
+    image: raghugannaram/calculation-service:1.0.0
+    ports:
+      - "9000:9000"
+    environment:
+      - LOG_LEVEL=debug
+    depends_on:
+      - addition-service
+      - subtraction-service
+      - multiplication-service
+      - division-service
