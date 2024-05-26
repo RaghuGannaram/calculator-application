@@ -34,7 +34,7 @@ services:
     environment:
       - LOG_LEVEL=debug
     volumes:
-      - ./logs:/app/logs
+      - ./_docker/logs:/app/logs
     depends_on:
       - addition-service
       - subtraction-service
