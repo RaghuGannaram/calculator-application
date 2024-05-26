@@ -1,0 +1,15 @@
+[submodule "addition-service"]
+	path = addition-service
+	url = git@github.com:RaghuGannaram/addition-service.git
+[submodule "subtraction-service"]
+	path = subtraction-service
+	url = git@github.com:RaghuGannaram/subtraction-service.git
+[submodule "multiplication-service"]
+	path = multiplication-service
+	url = git@github.com:RaghuGannaram/multiplication-service.git
+[submodule "division-service"]
+	path = division-service
+	url = git@github.com:RaghuGannaram/division-service.git
+[submodule "calculation-service"]
+	path = calculation-service
+	url = git@github.com:RaghuGannaram/calculation-service.git
