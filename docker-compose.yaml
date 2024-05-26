@@ -5,6 +5,8 @@ services:
       - "9001:9001"
     environment:
       - LOG_LEVEL=debug
+    volumes:
+      - ./_docker/addition_service/logs:/app/logs
 
   subtraction-service:
     image: raghugannaram/subtraction-service:1.0.0
@@ -12,6 +14,8 @@ services:
       - "9002:9002"
     environment:
       - LOG_LEVEL=debug
+    volumes:
+      - ./_docker/subtraction_service/logs:/app/logs
 
   multiplication-service:
     image: raghugannaram/multiplication-service:1.0.0
@@ -19,6 +23,8 @@ services:
       - "9003:9003"
     environment:
       - LOG_LEVEL=debug
+    volumes:
+      - ./_docker/multiplication_service/logs:/app/logs
 
   division-service:
     image: raghugannaram/division-service:1.0.0
@@ -26,6 +32,8 @@ services:
       - "9004:9004"
     environment:
       - LOG_LEVEL=debug
+    volumes:
+      - ./_docker/division_service/logs:/app/logs
 
   calculation-service:
     image: raghugannaram/calculation-service:1.0.0
@@ -34,7 +42,7 @@ services:
     environment:
       - LOG_LEVEL=debug
     volumes:
-      - ./_docker/logs:/app/logs
+      - ./_docker/calculation_service/logs:/app/logs
     depends_on:
       - addition-service
       - subtraction-service
