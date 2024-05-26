@@ -33,6 +33,8 @@ services:
       - "9000:9000"
     environment:
       - LOG_LEVEL=debug
+    volumes:
+      - ./logs:/app/logs
     depends_on:
       - addition-service
       - subtraction-service
